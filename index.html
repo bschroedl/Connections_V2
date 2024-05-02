@@ -6,44 +6,45 @@
   <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file -->
 </head>
 <body>
+<div class="game1">
+    <form action="connections" onsubmit="return false;">
+         <div>
+           <div>
+             <input type="button" class="numberButton" value="1" id="1" data-group="1">
+             <input type="button" class="numberButton" value="2" id="2" data-group="1">
+             <input type="button" class="numberButton" value="3" id="3" data-group="1">
+             <input type="button" class="numberButton" value="4" id="4" data-group="1">
+           </div>
 
-<form action="connections" onsubmit="return false;">
+           <div>
+             <input type="button" class="numberButton" value="5" id="5" data-group="2">
+             <input type="button" class="numberButton" value="6" id="6" data-group="2">
+             <input type="button" class="numberButton" value="7" id="7" data-group="2">
+             <input type="button" class="numberButton" value="8" id="8" data-group="2">
+           </div>
 
-  <div>
-    <div>
-      <input type="button" class="numberButton" value="1" id="1" data-row="1">
-      <input type="button" class="numberButton" value="2" id="2" data-row="1">
-      <input type="button" class="numberButton" value="3" id="3" data-row="1">
-      <input type="button" class="numberButton" value="4" id="4" data-row="1">
-    </div>
+           <div>
+             <input type="button" class="numberButton" value="9" id="9" data-group="3">
+             <input type="button" class="numberButton" value="10" id="10" data-group="3">
+             <input type="button" class="numberButton" value="11" id="11" data-group="3">
+             <input type="button" class="numberButton" value="12" id="12" data-group="3">
+           </div>
 
-    <div>
-      <input type="button" class="numberButton" value="5" id="5" data-row="2">
-      <input type="button" class="numberButton" value="6" id="6" data-row="2">
-      <input type="button" class="numberButton" value="7" id="7" data-row="2">
-      <input type="button" class="numberButton" value="8" id="8" data-row="2">
-    </div>
+           <div>
+             <input type="button" class="numberButton" value="13" id="13" data-group="4">
+             <input type="button" class="numberButton" value="14" id="14" data-group="4">
+             <input type="button" class="numberButton" value="15" id="15" data-group="4">
+             <input type="button" class="numberButton" value="16" id="16" data-group="4">
+           </div>
+         </div>
 
-    <div>
-      <input type="button" class="numberButton" value="9" id="9" data-row="3">
-      <input type="button" class="numberButton" value="10" id="10" data-row="3">
-      <input type="button" class="numberButton" value="11" id="11" data-row="3">
-      <input type="button" class="numberButton" value="12" id="12" data-row="3">
-    </div>
+         <input type="submit" value="Submit" name="connection">
+       </form>
 
-    <div>
-      <input type="button" class="numberButton" value="13" id="13" data-row="4">
-      <input type="button" class="numberButton" value="14" id="14" data-row="4">
-      <input type="button" class="numberButton" value="15" id="15" data-row="4">
-      <input type="button" class="numberButton" value="16" id="16" data-row="4">
-    </div>
-  </div>
-
-  <input type="submit" value="Submit" name="connection">
-</form>
-
+</div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="script.js"></script>
+<script src="startEnd.js"></script>
 
 </body>
 </html>

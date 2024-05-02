@@ -8,7 +8,7 @@ form {
 
 /* Style for clicked buttons */
 .numberButton {
-    width: 50px; /* Adjust as needed */
+    width: 100px; /* Adjust as needed */
     height: 50px; /* Adjust as needed */
     margin: 5px; /* Adjust as needed */
     background-color: #ccc;
