@@ -1,0 +1,28 @@
+/* Center the form */
+form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Style for clicked buttons */
+.numberButton {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    margin: 5px; /* Adjust as needed */
+    background-color: #ccc;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+/* Style for selected buttons */
+.numberButton.selected {
+    background-color: #ffcc00; /* Change to desired color */
+    color: #fff; /* Change to desired color */
+}
+
+.success {
+    background-color: green;
+    color: white;
+}
