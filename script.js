@@ -1,18 +1,23 @@
-$(function() {
+// import { clearStart } from "./startEnd"
+
+function startGame() {
   console.log("Script.js Loaded");
 
   var maxButtons = 4;
   var clickedButtons = [];
 
   let wordBank = [
-    ['Hugging', 'Hand Shake', 'Kissing', 'High Five'],
-    ['Pitch', 'Tempo', 'Timbre', 'Intensity'],
-    ['Oculesics', 'Gestures', 'Emblems', 'Regulators'],
-    ['Territoriality', 'Public Space', 'Social Space', 'Personal Space'],
-    ['Personal Time', 'Monochronic', 'Cultural Time', 'Polychronic'],
+    ['Hugging', 'Hand Shake', 'Kissing', 'High Five'], // Haptic
+    ['Pitch', 'Tempo', 'Timbre', 'Intensity'], // Vocalics
+    ['Oculesics', 'Gestures', 'Emblems', 'Regulators'], // Kinesics
+    ['Territoriality', 'Public Space', 'Social Space', 'Personal Space'], // Proxemics
+    ['Personal Time', 'Monochronic', 'Cultural Time', 'Polychronic'], // Chronemics
     ['word 21', 'word 22', 'word 23', 'word 24'],
     ['word 25', 'word 26', 'word 27', 'word 28'],
     ['word 29', 'word 30', 'word 31', 'word 32']
+    // ['Blushing', 'Sweating', 'Pupil dilation', 'Heart Beating'], // Physiological Responses
+    // ['Personal Smell', 'Environment Smell', 'Perfume', 'Sense of Smell'], // Olfactics
+    // ['Clothing', 'HairStyle', 'Accessories', 'Makeup'] // Personal Presentation
   ];
 
   function assignRandomWords(wordBank) {
@@ -76,9 +81,9 @@ $(function() {
   }
 
 
+
   // Call the function to set button values and data-group attribute
   setButtonValuesAndDataGroup(selectedWords);
-
 
 
 
@@ -174,8 +179,18 @@ $(function() {
 
     // Check if all buttons are successful
     if ($(".numberButton.success").length === $(".numberButton").length) {
-      alert("Congratulations! You've won!")
+      let game = document.querySelector(".game1");
+      let end = document.querySelector(".game3");
+
+
+      game.style.display = "none";
+      end.style.display = "block";
+
+      // alert("Congratulations! You've won!")
+      $('.cont').text("You Won! :D");
+
       $("input[type='submit']").prop("disabled", true);
+      $("#score").text($(".sec").text());
     }
   }
 
@@ -199,4 +214,4 @@ $(function() {
   // Event listener for form submission
   $("form").submit(handleSubmit);
 
-});
+}

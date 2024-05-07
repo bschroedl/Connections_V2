@@ -8,7 +8,7 @@ form {
 
 /* Style for clicked buttons */
 .numberButton {
-    width: 100px; /* Adjust as needed */
+    width: 150px; /* Adjust as needed */
     height: 50px; /* Adjust as needed */
     margin: 5px; /* Adjust as needed */
     background-color: #ccc;
@@ -26,3 +26,47 @@ form {
     background-color: green;
     color: white;
 }
+
+.game1 {
+    display: none;
+    margin-bottom: 1rem;
+
+}
+
+.game2 {
+    display: block;
+    margin-bottom: 1rem;
+
+}
+.game3 {
+    display: none;
+    margin-bottom: 1rem;
+
+}
+.info {
+    width: 25rem;
+    padding: 5px;
+    background-color: rgb(225, 193, 110);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    border: 1px solid rgb(100,100,100);
+    box-shadow: 1px 2px 1px rgb(193, 154, 107);
+    color: rgb(92, 64, 51);
+}
+
+button {
+    color: wheat;
+    background: #6C6D75;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    position: relative;
+    width: 150px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+button:hover{background-color:orange;}

@@ -7,6 +7,11 @@
 </head>
 <body>
 <div class="game1">
+    <div class="timer">
+      <span class="hour">00</span>
+      <span class="inner">:</span>
+      <span class="sec">30</span>
+    </div>
     <form action="connections" onsubmit="return false;">
          <div>
            <div>
@@ -41,6 +46,33 @@
          <input type="submit" value="Submit" name="connection">
        </form>
 
+</div>
+<div class="game2">
+  <div class="info">
+    <h2 class="cont">About Us:</h2>
+    <p class="info-par1">
+      This is a game made by 4 college students for their Oral/Interpretation class.
+    </p>
+    <h2 class="cont">About The Game:</h2>
+    <p class="info-par2">
+      The point of the game is to figure out what words are in a similar category.
+      For Instance Pitch, Tempo, Timbre, Intensity are all about of the Vocal Aspect
+      Communications.
+    </p>
+  </div>
+
+  <div class="buttons">
+    <button onclick="clearStart(), startGame()" id="start">Start</button>
+  </div>
+</div>
+
+
+<div class="game3">
+  <div class="info">
+    <h1 class="cont">Game Over!</h1>
+    <p>Your Score: <span id="score">0</span></p>
+    <button onclick="restartGame()">Play Again</button>
+  </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="script.js"></script>
