@@ -20,6 +20,16 @@ function startGame() {
     // ['Clothing', 'HairStyle', 'Accessories', 'Makeup'] // Personal Presentation
   ];
 
+
+  if (document.querySelectorAll('.success').length === 16) {
+    document.querySelectorAll('.success').forEach(button => {
+      button.classList.remove('success');
+    })
+    let selectedWords = assignRandomWords(wordBank);
+    setButtonValuesAndDataGroup(selectedWords);
+
+  }
+
   function assignRandomWords(wordBank) {
     let selectedWords = {};
 
@@ -121,9 +131,6 @@ function startGame() {
   }
 
 
-
-// Function to handle form submission
-// Function to handle form submission
 // Function to handle form submission
   function handleSubmit(event) {
     event.preventDefault(); // Prevent the default form submission
@@ -185,6 +192,8 @@ function startGame() {
 
       game.style.display = "none";
       end.style.display = "block";
+
+      clearInterval(intervalId);
 
       // alert("Congratulations! You've won!")
       $('.cont').text("You Won! :D");

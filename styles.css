@@ -1,30 +1,45 @@
+body {
+    background-color: #112318;
+    color: white;
+}
+
 /* Center the form */
 form {
+    width: 70%;
+    height: 10%;
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 /* Style for clicked buttons */
 .numberButton {
+    color: white;
     width: 150px; /* Adjust as needed */
     height: 50px; /* Adjust as needed */
     margin: 5px; /* Adjust as needed */
-    background-color: #ccc;
-    border: 1px solid #999;
+    background-color: #586f7c;
     border-radius: 5px;
+    border-style: none;
 }
 
 /* Style for selected buttons */
 .numberButton.selected {
-    background-color: #ffcc00; /* Change to desired color */
-    color: #fff; /* Change to desired color */
+    background-color: #9bd9d8; /* Change to desired color */
+    color: black; /* Change to desired color */
+}
+
+.numberButton:hover {
+    background-color: #5e8f88;
+    color: black;
 }
 
 .success {
-    background-color: green;
-    color: white;
+    background-color: #f4f4f9;
+    color: #1e3a29;
+    pointer-events: none;
 }
 
 .game1 {
@@ -41,26 +56,40 @@ form {
 .game3 {
     display: none;
     margin-bottom: 1rem;
-
 }
-.info {
-    width: 25rem;
-    padding: 5px;
-    background-color: rgb(225, 193, 110);
+
+.timer {
+    display: none;
+    background-color:#586f7c;
+    width: 30%;
+    padding: 10px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1rem;
-    border: 1px solid rgb(100,100,100);
-    box-shadow: 1px 2px 1px rgb(193, 154, 107);
-    color: rgb(92, 64, 51);
+    text-align: center;
+    border-radius: 5px;
+    font-size: 50px;
+    letter-spacing: 10px;
+}
+
+.info {
+    text-align: center;
+    color: white;
+    width: 25rem;
+    padding: 10px;
+    background-color: #586f7c;
+    margin: 8rem auto 1rem;
+    border-radius: 2px;
+    box-shadow: 1px 1px 10px #305d42;
 }
 
 button {
-    color: wheat;
-    background: #6C6D75;
+    color: white;
+    background: #586f7c;
     padding: 10px;
     font-size: 16px;
     border-radius: 5px;
+    border-style: none;
+    box-shadow: 1px 1px 10px #305d42;
     position: relative;
     width: 150px;
 }
@@ -69,4 +98,55 @@ button {
     text-align: center;
 }
 
-button:hover{background-color:orange;}
+button:hover{background-color: #b8dbd9;}
+
+.add{
+    margin: 10px;
+}
+
+.scoreboard{
+    position: absolute;
+    bottom: 5%;
+    text-align: center;
+    width: 100%;
+    height: 15rem;
+    margin: auto;
+    display: flex;
+}
+.team1{
+    margin-left: 8%;
+    margin-right: 8%;
+    background-color: #586f7c;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #305d42;
+}
+
+.team2{
+    margin-left: 8%;
+    margin-right: 8%;
+    background-color: #586f7c;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #305d42;
+}
+
+.team3{
+    margin-left: 8%;
+    margin-right: 8%;
+    background-color: #586f7c;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #305d42;
+}
+
+#submit {
+    margin-left: 40%;
+    margin-top: 2%;
+    color: white;
+    background-color: #586F7C;
+    box-shadow: 1px 1px 10px #305d42;
+    border-style: none;
+    border-radius: 5px;
+    width: 20%;
+    height: 40%;
+    text-align: center;
+}
+
