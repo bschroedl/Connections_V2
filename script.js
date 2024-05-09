@@ -239,7 +239,7 @@ function handleSuccess(buttonsInSameRow) {
       const para = document.createElement("p");
       para.appendChild(document.createTextNode(`Category ${i + 1}: ${wordBankCategory[value]}`));
       para.classList.add("REMOVE");
-      const ele = document.getElementById("id");
+      const ele = document.getElementById("cat");
       ele.appendChild(para);
     })
 
