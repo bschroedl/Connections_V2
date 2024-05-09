@@ -10,6 +10,17 @@ let wordBank = [
   ['Clothing', 'HairStyle', 'Accessories', 'Makeup'] // Personal Presentation
 ];
 
+let wordBankCategory = [
+  'Haptic',
+  'Vocalics',
+  'Kinesics',
+  'Proxemics',
+  'Chronemics',
+  'Physiological Responses',
+  'Olfactics',
+  'Personal Presentation'
+]
+
 let clickedButtons = [];
 let intervalId;
 let score = 0;
@@ -217,12 +228,49 @@ function handleSuccess(buttonsInSameRow) {
     clearInterval(intervalId);
 
 
+
+    // Usage example:
+    const uniqueDataGroups = getUniqueDataGroups();
+    uniqueDataGroups.sort(function (a, b) {
+      return a - b;
+    })
+
+    uniqueDataGroups.forEach(function(value, i) {
+      const para = document.createElement("p");
+      para.appendChild(document.createTextNode(`Category ${i + 1}: ${wordBankCategory[value]}`));
+      para.classList.add("REMOVE");
+      const ele = document.getElementById("id");
+      ele.appendChild(para);
+    })
+
+
     document.querySelector('.cont').textContent = "You Finished! :D";
     document.querySelector("input[type='submit']").disabled = true;
     document.getElementById("score").textContent = score;
 
   }
 }
+
+// Function to get unique data-group values from selected buttons
+function getUniqueDataGroups() {
+  // Get all selected buttons
+  const selectedButtons = document.querySelectorAll(".numberButton");
+
+  // Set to store unique data-group values
+  const uniqueDataGroups = new Set();
+
+  // Iterate over selected buttons and add their data-group values to the set
+  selectedButtons.forEach(button => {
+    const dataGroup = button.getAttribute("data-group");
+    if (dataGroup) {
+      uniqueDataGroups.add(dataGroup);
+    }
+  });
+
+  // Convert the Set to an array and return it
+  return Array.from(uniqueDataGroups);
+}
+
 
 
 // Function to handle row mismatch (4 buttons not in the same row)
@@ -263,6 +311,10 @@ function clearEnd() {
   document.querySelector('.cont').textContent = ""; // Clear any previous messages
   document.getElementById("score").textContent = "0"; // Reset score
   score = 0;
+
+  document.querySelectorAll('.REMOVE').forEach(function (element) {
+    element.parentNode.removeChild(element);
+  })
 
   // Reset button state
   const allButtons = document.querySelectorAll('.numberButton');
@@ -306,6 +358,19 @@ function timer() {
 
       end.show();
       game.hide();
+
+      const uniqueDataGroups = getUniqueDataGroups();
+      uniqueDataGroups.sort(function (a, b) {
+        return a - b;
+      })
+
+      uniqueDataGroups.forEach(function(value, i) {
+        const para = document.createElement("p");
+        para.appendChild(document.createTextNode(`Category ${i + 1}: ${wordBankCategory[value]}`));
+        para.classList.add("REMOVE");
+        const ele = document.getElementById("cat");
+        ele.appendChild(para);
+      })
 
       $('.cont').text("You ran out of time. :C");
       document.getElementById("score").textContent = score;
